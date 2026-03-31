@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merwede Architecture | Architectural Vision. Precision Build .</title>
+  <meta name="description"
+    content="Merwede Architecture is a Cape Town-based architectural design and 3D rendering studio. SACAP Registered. Specializing in council submissions across the Northern & Southern Suburbs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header id="header">
+    <nav class="nav-container">
+      <div class="nav-logo">
+        <a href="#home">
+          <img src="final logo.png" alt="Merwede Architecture Logo">
+        </a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link" style="color:#fff;">Home</a></li>
+        <li><a href="portfolio.html" class="nav-link">Projects</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="home" class="hero" style="background-image: url('final_banner.webp')">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Architectural Vision.<br>From Sketch to Reality.</h1>
+      <p class="hero-sub">From Johannesburg to Cape Town, we bridge the gap between heritage-sensitive restoration and
+        contemporary modern design. Our 3D renderings and council-ready plans turn complex regulations into seamless
+        realities.</p>
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn btn-primary" id="heroCtaPrimary">Start Your Project</a>
+        <a href="portfolio.html" class="btn btn-secondary">View Our Projects</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services" class="services">
+    <div class="container services-layout">
+
+      <!-- LEFT: title + tagline -->
+      <div class="services-info">
+        <h2 class="services-heading text-night">Services Rendered</h2>
+        <p class="services-tagline text-night">From first sketch to final approval,<br class="mobile-br">
+          we<br>handle <br class="mobile-br"> technical precision so you can<br class="mobile-br"> <br> focus on the
+          vision.</p>
+      </div>
+
+      <!-- RIGHT: 3 cards -->
+      <div class="services-right">
+        <div class="services-slider-wrapper">
+          <!-- <button class="services-arrow services-prev" aria-label="Previous"><i
+              class="fas fa-chevron-left"></i></button> -->
+          <div class="services-viewport" id="servicesViewport" style="overflow: hidden;">
+            <div class="services-grid" id="servicesTrack">
+              <div class="service-card">
+                <div class="service-icon"><i class="fas fa-pen-nib"></i></div>
+                <h3 class="service-name text-night">CONCEPT SKETCHING</h3>
+                <p class="service-desc text-night">From initial concept to detailed technical drawings, we translate
+                  your
+                  brief into precise, buildable designs that satisfy both your vision and council requirements. Every
+                  line
+                  we draw is intentional, accurate, and submission-ready.</p>
+              </div>
+              <div class="service-card">
+                <div class="service-icon"><i class="fas fa-camera"></i></div>
+                <h3 class="service-name text-night">High Quality 3D Renders</h3>
+                <p class="service-desc text-night">See your ideas before a single brick is laid. Our photorealistic 3D
+                  Renders provide a clear and definitive view of the finished product, streamlining the decision-making
+                  process and turning complex concepts into compelling, visual realities.</p>
+              </div>
+              <div class="service-card">
+                <div class="service-icon"><i class="fas fa-university"></i></div>
+                <h3 class="service-name text-night">Council Submission</h3>
+                <p class="service-desc text-night">Whether it's a modern Joburg build or a sensitive Cape Heritage
+                  restoration, we prepare and submit comprehensive documentation tailored to the specific demands of
+                  both
+                  Johannesburg and Cape Town councils.</p>
+              </div>
+              <div class="service-card">
+                <div class="service-icon"><i class="fas fa-hard-hat"></i></div>
+                <h3 class="service-name text-night">Project Management/Site Inspections</h3>
+                <p class="service-desc text-night">From Groundbreak to Handover, we provide project management and site
+                  inspections at every critical stage of construction. We manage the complexities of the build,
+                  coordinate
+                  with contractors, and verify compliance, ensuring your project stays on track, on brief, and up to
+                  standard.</p>
+              </div>
+            </div>
+          </div>
+          <!-- <button class="services-arrow services-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container services-cta-container">
+      <a href="contact.html" class="btn btn-primary services-main-cta">Start Your Project</a>
+    </div>
+
+    </div>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class="portfolio-section-header">
+        <h2 class="portfolio-section-title">Projects By Merwede</h2>
+
+        <div class="portfolio-mosaic">
+
+          <!-- Card 1: Residential -->
+          <div class="pf-item flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front"
+                style="background-image:url('Residential-20260316T065719Z-3-001/Residential/Cover Photo.jpg')">
+                <div class="pf-label-banner">
+                  <span class="pf-name">RESIDENTIAL</span>
+                </div>
+                <div class="pf-hover-content">
+                  <span class="pf-explore-btn">Click to explore projects</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <button class="flip-card-close" aria-label="Close details"><i class="fas fa-times"></i></button>
+
+                <button class="fc-arrow fc-prev" aria-label="Previous image"><i
+                    class="fas fa-chevron-left"></i></button>
+                <button class="fc-arrow fc-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+
+                <div class="fc-gallery">
+                  <div class="fc-slide">
+                    <img src="Residential-20260316T065719Z-3-001/Residential/New Luxury Home(1).jpg"
+                      alt="New Luxury Home Exterior" class="fc-stage-img">
+                    <div class="fc-slide-caption">New Luxury Home(1)</div>
+                  </div>
+                  <div class="fc-slide">
+                    <img src="Residential-20260316T065719Z-3-001/Residential/New Luxury Home.jpg"
+                      alt="New Luxury Home View 2" class="fc-stage-img">
+                    <div class="fc-slide-caption">New Luxury Home</div>
+                  </div>
+                  <div class="fc-slide">
+                    <img src="Residential-20260316T065719Z-3-001/Residential/Entertainment Area with Firepit.jpg"
+                      alt="Entertainment Area with Firepit" class="fc-stage-img">
+                    <div class="fc-slide-caption">Entertainment Area with Firepit</div>
+                  </div>
+                  <div class="fc-slide">
+                    <img src="Residential-20260316T065719Z-3-001/Residential/Complete Renovation.jpg"
+                      alt="Complete Renovation" class="fc-stage-img">
+                    <div class="fc-slide-caption">Complete Renovation</div>
+                  </div>
+                  <div class="fc-slide">
+                    <img src="Residential-20260316T065719Z-3-001/Residential/Apartment Block Seapoint.jpg"
+                      alt="Apartment Block Seapoint" class="fc-stage-img">
+                    <div class="fc-slide-caption">Apartment Block Seapoint</div>
+                  </div>
+                  <div class="fc-slide">
+                    <img src="Residential-20260316T065719Z-3-001/Residential/West Beach Apartment Block.jpg"
+                      alt="West Beach Apartment Block" class="fc-stage-img">
+                    <div class="fc-slide-caption">West Beach Apartment Block</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Industrial -->
+          <div class="pf-item flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" style="background-image:url('Industrial/Cover Photo.jpg')">
+                <div class="pf-label-banner">
+                  <span class="pf-name">INDUSTRIAL</span>
+                </div>
+                <div class="pf-hover-content">
+                  <span class="pf-explore-btn">Click to explore projects</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <button class="flip-card-close" aria-label="Close details"><i class="fas fa-times"></i></button>
+
+                <button class="fc-arrow fc-prev" aria-label="Previous image"><i
+                    class="fas fa-chevron-left"></i></button>
+                <button class="fc-arrow fc-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+
+                <div class="fc-gallery">
+                  <div class="fc-slide">
+                    <img src="Industrial/Factory Building_.jpg" alt="Factory Building" class="fc-stage-img">
+                    <div class="fc-slide-caption">Factory Building_</div>
+                  </div>
+                  <div class="fc-slide">
+                    <img src="Industrial/Factory_.jpg" alt="Factory Interior" class="fc-stage-img">
+                    <div class="fc-slide-caption">Factory_</div>
+                  </div>
+                  <div class="fc-slide">
+                    <img src="Industrial/Industrial Office Space.jpg" alt="Industrial Office Space"
+                      class="fc-stage-img">
+                    <div class="fc-slide-caption">Industrial Office Space</div>
+                  </div>
+                  <div class="fc-slide">
+                    <img src="Industrial/Industrial Workshop.jpg" alt="Industrial Workshop" class="fc-stage-img">
+                    <div class="fc-slide-caption">Industrial Workshop</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Commercial -->
+          <div class="pf-item flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" style="background-image:url('Commercial/Cover Photo.jpg')">
+                <div class="pf-label-banner">
+                  <span class="pf-name">COMMERCIAL</span>
+                </div>
+                <div class="pf-hover-content">
+                  <span class="pf-explore-btn">Click to explore projects</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <button class="flip-card-close" aria-label="Close details"><i class="fas fa-times"></i></button>
+
+                <button class="fc-arrow fc-prev" aria-label="Previous image"><i
+                    class="fas fa-chevron-left"></i></button>
+                <button class="fc-arrow fc-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+
+                <div class="fc-gallery">
+                  <div class="fc-slide">
+                    <img src="Commercial/Hospice Medical Centre.jpg" alt="Hospice Medical Centre" class="fc-stage-img">
+                    <div class="fc-slide-caption">Hospice Medical Centre</div>
+                  </div>
+                  <div class="fc-slide">
+                    <img src="Commercial/Hospice Medical Centre (2).jpg" alt="Hospice Medical Facility" class="fc-stage-img">
+                    <div class="fc-slide-caption">Hospice Medical Facility</div>
+                  </div>
+                  <div class="fc-slide">
+                    <img src="Commercial/Shop Render Bayside Mall.jpg" alt="Shop Render Bayside Mall"
+                      class="fc-stage-img">
+                    <div class="fc-slide-caption">Shop Render Bayside Mall</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Internal Design & Specifications -->
+          <div class="pf-item flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front"
+                style="background-image:url('Internal Design and Specification/Internal Apartment Render.jpg')">
+                <div class="pf-label-banner">
+                  <span class="pf-name">INTERNAL DESIGN & SPECIFICATIONS</span>
+                </div>
+                <div class="pf-hover-content">
+                  <span class="pf-explore-btn">Click to explore projects</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <button class="flip-card-close" aria-label="Close details"><i class="fas fa-times"></i></button>
+
+                <button class="fc-arrow fc-prev" aria-label="Previous image"><i
+                    class="fas fa-chevron-left"></i></button>
+                <button class="fc-arrow fc-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+
+                <div class="fc-gallery">
+                  <div class="fc-slide">
+                    <img src="Internal Design and Specification/Internal Apartment Render(1).jpg"
+                      alt="Internal Apartment Render 2" class="fc-stage-img">
+                    <div class="fc-slide-caption">Internal Apartment Render(1)</div>
+                  </div>
+                  <div class="fc-slide">
+                    <img src="Internal Design and Specification/Braai Room.jpg" alt="Braai Room" class="fc-stage-img">
+                    <div class="fc-slide-caption">Braai Room</div>
+                  </div>
+                  <div class="fc-slide">
+                    <img src="Internal Design and Specification/Double Volume Staircase.jpg"
+                      alt="Double Volume Staircase" class="fc-stage-img">
+                    <div class="fc-slide-caption">Double Volume Staircase</div>
+                  </div>
+                  <div class="fc-slide">
+                    <img src="Internal Design and Specification/Home Theatre.jpg" alt="Home Theatre"
+                      class="fc-stage-img">
+                    <div class="fc-slide-caption">Home Theatre</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+  </section>
+
+  <!-- ===================== PROJECT MODAL ===================== -->
+  <div class="proj-modal" id="projModal" role="dialog" aria-modal="true" aria-label="Project details">
+    <div class="proj-modal__backdrop" onclick="closeProject()"></div>
+    <div class="proj-modal__card" id="projCard">
+      <!-- Slider side -->
+      <div class="proj-modal__slider" id="projSlider">
+        <button class="proj-slide-btn proj-slide-btn--prev" onclick="slideImg(-1)"
+          aria-label="Previous">&#8592;</button>
+        <div class="proj-slides" id="projSlides"></div>
+        <button class="proj-slide-btn proj-slide-btn--next" onclick="slideImg(1)" aria-label="Next">&#8594;</button>
+        <div class="proj-slide-dots" id="projDots"></div>
+      </div>
+      <!-- Info side -->
+      <div class="proj-modal__info">
+        <button class="proj-modal__close" onclick="closeProject()" aria-label="Close">&times;</button>
+        <p class="proj-eyebrow" id="projLocation"></p>
+        <h2 class="proj-title" id="projTitle"></h2>
+        <p class="proj-desc" id="projDesc"></p>
+        <div class="proj-meta" id="projMeta"></div>
+        <a href="contact.html" class="btn btn-primary proj-cta">Start a Similar Project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="about">
+    <div class="container about-grid">
+      <div class="about-image-col">
+        <div class="about-image-wrap">
+          <img src="New Renders/usethese image.jpg" alt="Paul van Meer, Principal Architect at Merwede Architecture" />
+        </div>
+      </div>
+      <div class="about-content-col">
+        <p class="section-eyebrow">About Us</p>
+        <h2 class="section-title">At Merwede Architecture</h2>
+        <p class="about-lead">The name Merwede is drawn from a river in the Netherlands, a nod to our founder's roots
+          and a reflection of our core philosophy: that the most complex challenges are often solved through a steady,
+          focused, and 'quiet' expertise.</p>
+        <p class="about-lead">We are a dedicated architectural design and 3D rendering studio. Three decades of hands-on
+          experience is embedded in every line we draw, every photorealistic render we produce, and every municipal
+          submission we package.</p>
+        <p class="about-lead">Whether you are a property developer navigating the complexities of multiple sites or a
+          homeowner embarking on a once-in-a-lifetime build, we bring a singular promise: a process that is clear,
+          professional, and entirely stress-free.</p>
+        <div class="about-credentials">
+          <div class="credential-item">
+            <i class="fas fa-certificate"></i>
+            <div>
+              <strong>SACAP Registered: PrArchT0650</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="container footer-grid">
+
+        <div class="footer-brand">
+          <div class="nav-logo footer-logo">
+            <a href="index.html">
+              <img src="final logo.png" alt="Merwede Architecture Logo">
+            </a>
+          </div>
+          <p class="footer-tagline">Let’s get your plans approved. Contact us for a consultation in Johannesburg or Cape
+            Town.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Get In Touch</h4>
+          <div class="footer-contact-icons">
+            <a href="https://wa.me/27823892595" target="_blank" rel="noopener" class="footer-contact-icon"
+              title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:info@merwedearchitecture.co.za" class="footer-contact-icon" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Professional Body</h4>
+          <ul class="footer-pro-list">
+            <li><i class="fas fa-check-circle"></i> SACAP Registered: PrArchT0650</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Follow Us</h4>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/merwede-architecture/" target="_blank" rel="noopener"
+              class="social-icon social-icon--linkedin" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/merwede_architecture?igsh=bG5kM3BmMHZyMTdk" target="_blank"
+              rel="noopener" class="social-icon social-icon--instagram" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/search/top?q=merwede%20architecture" target="_blank"
+              rel="noopener" class="social-icon social-icon--facebook" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="container">
+        <p>Copyright &copy; 2024 MerwedeArchitecture. All Rights Reserved. Serving Johannesburg and Cape Town.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
