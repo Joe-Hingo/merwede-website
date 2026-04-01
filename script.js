@@ -275,16 +275,7 @@ function handleFormSubmit(e) {
 
   setTimeout(() => {
     form.reset();
-    btn.style.display = 'none';
-    success.classList.add('visible');
-
-    // Reset after 6 seconds
-    setTimeout(() => {
-      btn.style.display = '';
-      btn.disabled = false;
-      btn.innerHTML = '<span>Request Consultation</span><i class="fas fa-arrow-right"></i>';
-      success.classList.remove('visible');
-    }, 6000);
+    window.location.href = 'thankyou.html';
   }, 1600);
 }
 
@@ -505,4 +496,63 @@ document.querySelectorAll('.fc-next').forEach(btn => {
   });
 });
 
+/* =============================================
+   13. MASONRY LIGHTBOX
+   ============================================= */
+document.addEventListener('DOMContentLoaded', () => {
+  const masonryItems = document.querySelectorAll('.pf-masonry-item');
+  if (masonryItems.length > 0) {
+    // Create lightbox HTML dynamically
+    const lightbox = document.createElement('div');
+    lightbox.className = 'masonry-lightbox';
+    lightbox.innerHTML = `
+      <div class="ml-backdrop"></div>
+      <div class="ml-content">
+        <button class="ml-close" aria-label="Close Lightbox">&times;</button>
+        <img class="ml-img" src="" alt="Enlarged View" />
+        <div class="ml-caption"></div>
+      </div>
+    `;
+    document.body.appendChild(lightbox);
 
+    const mlImg = lightbox.querySelector('.ml-img');
+    const mlCaption = lightbox.querySelector('.ml-caption');
+    const mlClose = lightbox.querySelector('.ml-close');
+    const mlBackdrop = lightbox.querySelector('.ml-backdrop');
+
+    function openLightbox(src, caption) {
+      mlImg.src = src;
+      mlCaption.textContent = caption;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden'; 
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+      setTimeout(() => { mlImg.src = ''; }, 300); // clear after fade out
+    }
+
+    mlClose.addEventListener('click', closeLightbox);
+    mlBackdrop.addEventListener('click', closeLightbox);
+
+    // Esc key close
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+
+    // Attach click events to masonry images
+    masonryItems.forEach(item => {
+      item.style.cursor = 'pointer'; // Make it clear it's clickable
+      item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        const overlay = item.querySelector('.pf-masonry-title');
+        if (img) {
+          openLightbox(img.src, overlay ? overlay.textContent : '');
+        }
+      });
+    });
+  }
+});
