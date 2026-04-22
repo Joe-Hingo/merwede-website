@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact | Merwede Architecture</title>
@@ -140,18 +140,19 @@
     </style>
     <!-- ===================== TRACKING SCRIPTS ===================== -->
     <!-- REPLACE 'YOUR_..._ID' WITH ACTUAL IDS PROVIDED BY THE SERVICES -->
-    
+
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_MEASUREMENT_ID"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'YOUR_GA_MEASUREMENT_ID');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'YOUR_GA_MEASUREMENT_ID');
     </script>
-    
+
     <!-- Google Search Console -->
     <meta name="google-site-verification" content="YOUR_SEARCH_CONSOLE_VERIFICATION_CODE" />
+<<<<<<< HEAD
     
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
@@ -160,7 +161,22 @@
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "wfkl852x3f");
+=======
+
+    <!-- Hotjar Tracking Code -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 'YOUR_HOTJAR_ID', hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+>>>>>>> 0eaa505f591d1831290b1b3241f4329933d178f0
     </script>
+    <script
+        src="https://www.google.com/recaptcha/enterprise.js?render=6Lf0XZosAAAAAL5JedxUc0uK-Ax7Y8h39ebTZfSz"></script>
     <script src="https://t.contentsquare.net/uxa/ec106db3bb3d9.js"></script>
 </head>
 
@@ -204,7 +220,7 @@
             <div class="contact-grid">
 
                 <!-- Form -->
-                <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+                <form class="contact-form" id="contactForm"> <!--onsubmit="handleFormSubmit(event)"-->
                     <div class="form-row">
                         <div class="form-group">
                             <label for="firstName">First Name</label>
@@ -213,6 +229,14 @@
                         <div class="form-group">
                             <label for="lastName">Last Name</label>
                             <input type="text" id="lastName" name="lastName" placeholder="e.g. Johnson" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" placeholder="e.g. sarah@company.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="text" id="phone" name="phone" placeholder="e.g. 012 345 67 89" required />
                         </div>
                     </div>
                     <div class="form-row">
@@ -231,7 +255,9 @@
                             placeholder="Tell us about your project, timeline, and any specific requirements&hellip;"
                             required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                    <button class="g-recaptcha btn btn-primary btn-full"
+                        data-sitekey="6Lf0XZosAAAAAL5JedxUc0uK-Ax7Y8h39ebTZfSz" data-callback='onSubmit'
+                        data-action='submit'>
                         <span>Request Consultation</span>
                         <i class="fas fa-arrow-right"></i>
                     </button>
@@ -240,6 +266,46 @@
                         <p>Thank you! We'll be in touch within 24 hours.</p>
                     </div>
                 </form>
+                <!-- Replace the variables below. -->
+                <script>
+                    function onSubmit(token) {
+                        const form = document.getElementById('contactForm');
+                        const responseMessage = document.getElementById('formSuccess');
+                        const webhookUrl = 'https://hook.eu2.make.com/hdkk8vtfqadg0nnml38seiv264d8zijb';
+
+                        const formData = new FormData(form);
+                        const jsonData = Object.fromEntries(formData.entries());
+
+                        fetch(webhookUrl, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json'
+                            },
+                            body: JSON.stringify(jsonData)
+                        })
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Network response was not OK');
+                                }
+                                return response;
+                            })
+                            .then(data => {
+                                console.log('Success:', data);
+                                responseMessage.style.display = "flex";
+                                responseMessage.querySelector('p').textContent = 'Form submitted successfully!';
+                                const baseUrl = window.location.origin + "thankyou";
+                                window.location.href = baseUrl;
+                                form.reset();
+
+                            })
+                            .catch((error) => {
+                                console.error('Error:', error);
+                                responseMessage.style.display = "flex";
+                                responseMessage.querySelector('p').textContent = 'An error occurred. Please try again.';
+                            });
+                    }
+                </script>
 
                 <!-- Info -->
                 <div class="contact-map-col">
@@ -312,13 +378,12 @@
                 <div class="footer-col">
                     <h4 class="footer-col-title">Follow Us</h4>
                     <div class="footer-social">
-                        <a href="https://www.linkedin.com/company/merwede-architecture/"
-                            target="_blank" rel="noopener" class="social-icon social-icon--linkedin"
-                            aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/company/merwede-architecture/" target="_blank" rel="noopener"
+                            class="social-icon social-icon--linkedin" aria-label="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="https://www.instagram.com/merwede_architecture?igsh=bG5kM3BmMHZyMTdk" target="_blank" rel="noopener"
-                            class="social-icon social-icon--instagram" aria-label="Instagram">
+                        <a href="https://www.instagram.com/merwede_architecture?igsh=bG5kM3BmMHZyMTdk" target="_blank"
+                            rel="noopener" class="social-icon social-icon--instagram" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
                         <a href="https://www.facebook.com/search/top?q=merwede%20architecture" target="_blank"
@@ -341,7 +406,8 @@
     <script src="script.js"></script>
 
     <!-- ===================== FLOATING WHATSAPP ===================== -->
-    <a href="https://wa.me/27823892595" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" id="waFloat">
+    <a href="https://wa.me/27823892595" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"
+        id="waFloat">
         <span class="wa-float__label">Chat with us</span>
         <span class="wa-float__btn"><i class="fab fa-whatsapp"></i></span>
     </a>
