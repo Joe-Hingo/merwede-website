@@ -1236,29 +1236,26 @@ select {
   margin-bottom: 20px;
 }
 
-.footer-contact-icons {
+.footer-contact-text {
   display: flex;
+  flex-direction: column;
   gap: 12px;
 }
 
-.footer-contact-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(247, 241, 236, 0.08);
-  border: 1px solid rgba(247, 241, 236, 0.12);
-  display: flex;
+.footer-contact-link {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: rgba(247, 241, 236, 0.9);
+  transition: color var(--transition), transform var(--transition);
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  color: rgba(247, 241, 236, 0.65);
-  font-size: 1rem;
-  transition: background var(--transition), color var(--transition);
+  gap: 8px;
+  text-decoration: none;
 }
 
-.footer-contact-icon:hover {
-  background: var(--orange);
-  color: #fff;
-  border-color: var(--orange);
+.footer-contact-link:hover {
+  color: var(--orange);
+  transform: translateX(4px);
 }
 
 .footer-pro-list {
