@@ -470,10 +470,10 @@ button {
 
 .services-heading {
   font-family: var(--font-heading);
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
   font-weight: 800;
   color: var(--night);
-  line-height: 1.18;
+  line-height: 1.15;
   margin-bottom: 18px;
 }
 
@@ -2260,5 +2260,144 @@ select {
   }
   .about-founder {
     padding: 70px 0;
+  }
+}
+
+/* ==========================================
+   OUR PROCESS
+   ========================================== */
+.process-section {
+  background: var(--night);
+  color: var(--snow);
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.process-container {
+  display: block;
+}
+
+.process-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 80px auto;
+}
+
+.process-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dew);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.process-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--snow);
+  margin-bottom: 1.5rem;
+}
+
+.process-sub {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: rgba(247, 241, 236, 0.7);
+  margin: 0 auto;
+}
+
+.process-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Group hover effect: dim un-hovered steps */
+@media (hover: hover) {
+  .process-list:hover .process-step {
+    opacity: 0.3;
+  }
+  
+  .process-list .process-step:hover {
+    opacity: 1;
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  width: calc(33.333% - 20px);
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.step-number {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--snow);
+  line-height: 1;
+  opacity: 0.15;
+  margin-bottom: 24px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: left bottom;
+}
+
+.process-step:hover .step-number {
+  color: var(--orange);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.step-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--snow);
+  margin-bottom: 1rem;
+}
+
+.step-desc {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(247, 241, 236, 0.65);
+}
+
+@media (max-width: 1024px) {
+  .process-step {
+    width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .process-header {
+    margin-bottom: 50px;
+  }
+  .process-section {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .process-step {
+    width: 100%;
+  }
+  .step-number {
+    font-size: 3rem;
   }
 }
