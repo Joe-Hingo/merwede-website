@@ -464,6 +464,8 @@ button {
 /* Left column */
 .services-info {
   padding-top: 8px;
+  position: sticky;
+  top: 140px;
 }
 
 .services-heading {
@@ -479,6 +481,7 @@ button {
   font-size: 0.94rem;
   color: var(--night);
   line-height: 1.72;
+  margin-bottom: 30px;
 }
 
 /* Right column: cards + cta stacked */
@@ -504,6 +507,10 @@ button {
   border: 1px solid rgba(0, 10, 33, 0.05);
   position: relative;
   overflow: hidden;
+}
+
+.service-card-full {
+  grid-column: 1 / -1;
 }
 
 .service-card:hover {
