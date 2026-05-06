@@ -170,6 +170,11 @@ button {
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
 }
 
+#header.nav-blue-bg.scrolled {
+  background: rgba(10, 43, 82, 0.98); /* Distinct blue for light backgrounds */
+  box-shadow: 0 4px 20px rgba(10, 43, 82, 0.3);
+}
+
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -745,6 +750,14 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin: 0;
+}
+
+.pf-desc {
+  font-family: var(--font-body);
+  color: rgba(247, 241, 236, 0.8);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 6px 0 0 0;
 }
 
 /* Hover Button Overlay */
@@ -2399,5 +2412,101 @@ select {
   }
   .step-number {
     font-size: 3rem;
+  }
+}
+
+/* ==========================================
+   STATS / CREDENTIALS BAR
+   ========================================== */
+.stats-section {
+  background: var(--orange);
+  color: #fff;
+  padding: 80px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.stats-header {
+  text-align: center;
+}
+
+.stats-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.stats-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.stat-item {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.stat-label {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.9;
+}
+
+@media (max-width: 960px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+  }
+  .stat-item {
+    border-right: none;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
   }
 }

@@ -556,3 +556,62 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+/* =============================================
+   14. NUMBER COUNTER ANIMATION
+   ============================================= */
+document.addEventListener('DOMContentLoaded', () => {
+  const counters = document.querySelectorAll('.counter');
+  if (counters.length === 0) return;
+
+  const counterObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counter = entry.target;
+        const target = +counter.getAttribute('data-target');
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        
+        let current = 0;
+        const updateCounter = () => {
+          current += increment;
+          if (current < target) {
+            counter.innerText = Math.ceil(current);
+            requestAnimationFrame(updateCounter);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        
+        updateCounter();
+        observer.unobserve(counter);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => {
+    counterObserver.observe(counter);
+  });
+});
+
+
+/* =============================================
+   15. DYNAMIC NAV BACKGROUND
+   ============================================= */
+document.addEventListener('DOMContentLoaded', () => {
+  const bgObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const lightSections = ['about-founder', 'services', 'portfolio'];
+        if (lightSections.includes(entry.target.id)) {
+          document.getElementById('header').classList.add('nav-blue-bg');
+        } else {
+          document.getElementById('header').classList.remove('nav-blue-bg');
+        }
+      }
+    });
+  }, { rootMargin: '-10% 0px -90% 0px' });
+
+  document.querySelectorAll('section').forEach(s => bgObserver.observe(s));
+});
+
