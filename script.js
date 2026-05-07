@@ -602,11 +602,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const bgObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const lightSections = ['about-founder', 'services', 'portfolio'];
-        if (lightSections.includes(entry.target.id)) {
-          document.getElementById('header').classList.add('nav-blue-bg');
-        } else {
-          document.getElementById('header').classList.remove('nav-blue-bg');
+        const header = document.getElementById('header');
+        header.classList.remove('nav-orange-bg');
+        
+        if (entry.target.id === 'stats') {
+          header.classList.add('nav-orange-bg');
         }
       }
     });
