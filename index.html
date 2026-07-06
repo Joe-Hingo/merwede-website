@@ -432,14 +432,15 @@
   <script>
     // Defer ALL tracking scripts until browser is idle, preventing TBT impact
     function loadTrackingScripts() {
-      // Google Analytics
+      // Google Tag (Google Ads & Google Analytics)
       var gs = document.createElement('script');
       gs.async = true;
-      gs.src = 'https://www.googletagmanager.com/gtag/js?id=G-8H4WT26PH3';
+      gs.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17855678929';
       document.head.appendChild(gs);
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
+      gtag('config', 'AW-17855678929');
       gtag('config', 'G-8H4WT26PH3');
 
       // Microsoft Clarity
