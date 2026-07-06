@@ -565,6 +565,9 @@ button  {
   grid-template-columns:1fr;
   gap:36px;
 }
+.services-info  {
+  position:static;
+}
 }
 .portfolio  {
   background:var(--snow);
