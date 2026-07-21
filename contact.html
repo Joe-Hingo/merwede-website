@@ -19,20 +19,25 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18059156486"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'AW-18059156486');
     </script>
 
     <!-- ===================== DEFERRED MAIN STYLESHEET ===================== -->
     <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="styles.css" /></noscript>
+    <noscript>
+        <link rel="stylesheet" href="styles.css" />
+    </noscript>
 
     <!-- ===================== FONTS ===================== -->
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet" />
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'"><noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </noscript>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/png" href="/favicon.webp">
 
@@ -160,42 +165,42 @@
     </style>
     <!-- ===================== DEFERRED TRACKING SCRIPTS ===================== -->
     <script>
-      function loadTrackingScripts() {
-        // Google Tag (Google Ads & Google Analytics)
-        var gs = document.createElement('script');
-        gs.async = true;
-        gs.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18059156486';
-        document.head.appendChild(gs);
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'AW-18059156486');
-        gtag('config', 'G-8H4WT26PH3');
-        (function (c, l, a, r, i, t, y) {
-          c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-          t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
-          y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, 'clarity', 'script', 'wfkl852x3f');
-        var cs = document.createElement('script'); cs.defer = true;
-        cs.src = 'https://t.contentsquare.net/uxa/ec106db3bb3d9.js';
-        document.head.appendChild(cs);
-        !function (f, b, e, v, n, t, s) {
-          if (f.fbq) return; n = f.fbq = function () {
-            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-          };
-          if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-          n.queue = []; t = b.createElement(e); t.async = !0;
-          t.src = v; s = b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t, s)
-        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1763597548348383');
-        fbq('track', 'PageView');
-      }
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(loadTrackingScripts, { timeout: 3000 });
-      } else {
-        setTimeout(loadTrackingScripts, 2000);
-      }
+        function loadTrackingScripts() {
+            // Google Tag (Google Ads & Google Analytics)
+            var gs = document.createElement('script');
+            gs.async = true;
+            gs.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18059156486';
+            document.head.appendChild(gs);
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'AW-18059156486');
+            gtag('config', 'G-8H4WT26PH3');
+            (function (c, l, a, r, i, t, y) {
+                c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+                t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+                y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+            })(window, document, 'clarity', 'script', 'wfkl852x3f');
+            var cs = document.createElement('script'); cs.defer = true;
+            cs.src = 'https://t.contentsquare.net/uxa/ec106db3bb3d9.js';
+            document.head.appendChild(cs);
+            !function (f, b, e, v, n, t, s) {
+                if (f.fbq) return; n = f.fbq = function () {
+                    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
+                if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+                n.queue = []; t = b.createElement(e); t.async = !0;
+                t.src = v; s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1763597548348383');
+            fbq('track', 'PageView');
+        }
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(loadTrackingScripts, { timeout: 3000 });
+        } else {
+            setTimeout(loadTrackingScripts, 2000);
+        }
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=1763597548348383&ev=PageView&noscript=1" /></noscript>
@@ -302,6 +307,13 @@
                 </form>
                 <!-- Replace the variables below. -->
                 <script>
+                    document.getElementById('contactForm').addEventListener("submit", (e) => {
+                        e.preventDefault();
+                        const tokenItem = e.target.querySelector('[data-sitekey]');
+
+                        const token = tokenItem ? tokenItem.getAttribute('data-sitekey') : null;
+                        onSubmit(token);
+                    });
                     function onSubmit(token) {
                         const form = document.getElementById('contactForm');
                         const responseMessage = document.getElementById('formSuccess');
@@ -344,7 +356,8 @@
                 <!-- Info -->
                 <div class="contact-map-col">
                     <div class="contact-logo-container">
-                        <img src="final logo.webp" class="contact-logo" alt="Merwede Architecture Logo" width="152" height="104" loading="lazy" decoding="async">
+                        <img src="final logo.webp" class="contact-logo" alt="Merwede Architecture Logo" width="152"
+                            height="104" loading="lazy" decoding="async">
                     </div>
                     <div class="contact-info-cards" style="grid-template-columns: 1fr; margin-top: 0;">
                         <div class="contact-info-card" style="margin-bottom: 20px;">
@@ -382,7 +395,8 @@
                 <div class="footer-brand">
                     <div class="nav-logo footer-logo">
                         <a href="index.html">
-                            <img src="final logo.webp" alt="Merwede Architecture Logo" width="152" height="104" loading="lazy" decoding="async">
+                            <img src="final logo.webp" alt="Merwede Architecture Logo" width="152" height="104"
+                                loading="lazy" decoding="async">
                         </a>
                     </div>
                     <p class="footer-tagline">Let’s get your plans approved. Contact us for a consultation in
